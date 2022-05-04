@@ -45,6 +45,6 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
-      params.require(:article).premit(:title, :body)
+      params.require(:article).premit(:title, :body, :status)
     end
 end
