@@ -1,24 +1,19 @@
-# README
+## 概要
+blogアプリを完成させるために必要な技術を追記する。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 必要な技術
+- テストの自動化
+  - Minitest
+  - RSpec
+  - CircleCI
+- データベース
+  - SQLite3
+  - PostgreSQL
+  - MySQL
+- アプリケーションのデプロイ
+  - Heroku
+  - CircleCI
+- FrontendをVue.jsで実装
+  - Vue.js
+- BackendをRailsのAPIモードで実装
+  - Rails API
