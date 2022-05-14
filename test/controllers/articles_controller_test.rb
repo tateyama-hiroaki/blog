@@ -3,6 +3,7 @@ require "test_helper"
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @article = articles(:first_article)
+    @base_title = "Blog"
   end
 
   teardown do
@@ -12,16 +13,19 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get articles_url
     assert_response :success
+    assert_select "title", @base_title
   end
 
   test "should get show" do
     get article_url(@article)
-    assert_response :success  
+    assert_response :success
+    assert_select "title", @base_title
   end
 
   test "should get new" do
     get new_article_url
-    assert_response :success    
+    assert_response :success
+    assert_select "title", @base_title
   end
 
   test "should create article" do
@@ -33,6 +37,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_article_url(@article)
     assert_response :success
+    assert_select "title", @base_title
   end
 
   test "should update article" do
