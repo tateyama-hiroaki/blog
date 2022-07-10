@@ -1,11 +1,11 @@
 require "test_helper"
 
 class ArticleTest < ActiveSupport::TestCase
-  setup do
+  def setup
     @article = articles(:first_article)
   end
 
-  teardown do
+  def teardown
     Rails.cache.clear
   end
 
@@ -14,17 +14,17 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test "title should be present" do
-    @article.title = ""
+    @article.title = " "
     assert_not @article.valid?
   end
 
   test "body should be present" do
-    @article.body = ""
+    @article.body = " "
     assert_not @article.valid?
   end
 
   test "body should not be too short" do
-    @article.body = "Hey!"
+    @article.body = "s" * 3
     assert_not @article.valid?
   end
 end
