@@ -2,3 +2,8 @@ first_article:
   title: "greeting"
   body: "hello, rails."
   status: "public"
+
+first:
+  title: Greeting
+  body: Hello, Rails.
+  status: public
