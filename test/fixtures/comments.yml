@@ -1,4 +1,5 @@
-# first:
+# first_comment:
 #   commenter: Bob
 #   body: Hello, Ruby on Rails.
 #   status: public
+#   article_id: firlst_article
