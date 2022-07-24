@@ -53,4 +53,19 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
       assert_select "input", value: "Create Article"
     end
   end
+
+  test "comment show page layout" do
+    get article_path(@article)
+    assert_select "h2", "Comments"
+    assert_select "h2", "Add a comment"
+    assert_select "form" do
+      assert_select "label", "Commenter"
+      assert_select "label", "Body"
+      assert_select "label", "Status"
+      assert_select "select", 1
+      assert_select "input", type: "text"
+      assert_select "input", type: "submit"
+      assert_select "textarea", 1
+    end
+  end
 end
